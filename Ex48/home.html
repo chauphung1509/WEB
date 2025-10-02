@@ -1,0 +1,118 @@
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Ex48 - PKC </title>
+    <style>
+        body {
+            background-color: #b3d9ff;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        .container {
+            width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #cce6ff;
+            border: 1px solid #333;
+        }
+        h2 {
+            text-align: center;
+        }
+        label {
+            display: inline-block;
+            width: 100px;
+        }
+        input[type="text"], select, textarea {
+            padding: 3px;
+            margin: 3px 0;
+        }
+        .row {
+            margin: 8px 0;
+        }
+        .buttons {
+            text-align: center;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div style="text-align:center;">
+            <img src="/Ex48/images/Jackson.gif" alt="Jackson Electronics Logo" height="60">
+            <h2>Registration Form</h2>
+            <p>Register your Jackson Electronics product here</p>
+        </div>
+
+        <form>
+            <div class="row">
+                <label>First Name:</label>
+                <input type="text" name="firstname">
+                <label style="width:80px;">Last Name:</label>
+                <input type="text" name="lastname">
+            </div>
+            <div class="row">
+                <label>Address #1:</label>
+                <input type="text" name="address1" size="40">
+            </div>
+            <div class="row">
+                <label>Address #2:</label>
+                <input type="text" name="address2" size="40">
+            </div>
+            <div class="row">
+                <label>City:</label>
+                <input type="text" name="city">
+                <label style="width:50px;">State:</label>
+                <input type="text" name="state" size="5">
+                <label style="width:30px;">Zip:</label>
+                <input type="text" name="zip" size="6">
+            </div>
+            <div class="row">
+                <label>Country:</label>
+                <input type="text" name="country" value="United States">
+            </div>
+            <hr>
+            <div class="row">
+                <label>Product:</label>
+                <select name="product">
+                    <option>ScanMaster</option>
+                    <option>PrinterPro</option>
+                    <option>SmartCam</option>
+                    <option>Other</option>
+                </select>
+            </div>
+            <div class="row">
+                <label>Date Purchased:</label>
+                <input type="text" name="date">
+            </div>
+            <div class="row">
+                <label>Serial #:</label>
+                <input type="text" name="serial">
+            </div>
+            <div class="row">
+                <label>Used for:</label><br>
+                <input type="radio" name="used" value="home"> Home
+                <input type="radio" name="used" value="business"> Business
+                <input type="radio" name="used" value="government"> Government
+                <input type="radio" name="used" value="edu"> Educational Institution
+                <input type="radio" name="used" value="other"> Other
+            </div>
+            <div class="row">
+                <label>System:</label><br>
+                <input type="checkbox" name="system" value="windows"> Windows
+                <input type="checkbox" name="system" value="mac"> Macintosh
+                <input type="checkbox" name="system" value="unix"> UNIX
+                <input type="checkbox" name="system" value="other"> Other
+            </div>
+            <hr>
+            <div class="row">
+                <label>Comments?:</label><br>
+                <textarea name="comments" rows="5" cols="60"></textarea>
+            </div>
+            <div class="buttons">
+                <input type="submit" value="Click to register">
+                <input type="reset" value="Click to cancel">
+            </div>
+        </form>
+    </div>
+</body>
+</html>
