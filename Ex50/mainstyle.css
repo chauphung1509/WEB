@@ -1,0 +1,65 @@
+body {
+	background-color: #ccffff;
+	font-family: Arial, sans-serif;
+}
+
+.container {
+	width: 700px;
+	margin: 20px auto;
+	border: 1px solid blue;
+	background-color: #c5f5f5;
+	padding: 20px;
+}
+
+.logo img {
+	display: block;
+	margin: 0 auto 10px auto;
+}
+
+h2 {
+	text-align: left;
+	font-size: 20px;
+}
+
+hr {
+	border: 1px solid gray;
+	margin-bottom: 15px;
+}
+
+p {
+	margin: 10px 0;
+}
+
+textarea {
+	width: 100%;
+}
+
+.expense {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+.expense th, .expense td {
+	border: 1px solid #999;
+	padding: 5px;
+	text-align: left;
+}
+
+.expense th {
+	background-color: #bfefff;
+}
+
+.buttons {
+	margin-top: 10px;
+}
+
+.buttons input {
+	margin-right: 10px;
+	padding: 5px 10px;
+	font-weight: bold;
+}
+
+.note {
+	font-size: 13px;
+	margin-top: 15px;
+}

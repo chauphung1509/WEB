@@ -1,0 +1,115 @@
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Ex 51 - Phung Kim Chau</title>
+        <style>
+            body {
+                background-color: teal;
+                font-family: 'Times New Roman', Times, serif;
+                color: white;
+            }
+            .container {
+                width: 650px;
+                margin: 0 auto;
+                padding: 20px;
+            }
+            h1, h2 {
+                text-align: center;
+            }
+            .hospital-name {
+                text-align: center;
+                color: orange;
+                font-size: 28px;
+                font-weight: bold;
+            }
+            .hospital-sub {
+                text-align: center;
+                color: #ffcc66;
+                font-size: 14px;
+            }
+            form {
+                margin-top: 20px;
+            }
+            label {
+                display: inline-block;
+                width: 180px;
+                margin: 5px 0;
+            }
+            input[type="text"], input[type="date"], select {
+                padding: 4px;
+                margin: 5px 0;
+            }
+            .row {
+                margin-bottom: 10px;
+            }
+            .buttons {
+                text-align: center;
+                margin-top: 15px;
+            }
+            .buttons input {
+                padding: 6px 14px;
+                margin: 0 5px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="hospital-name">
+                <img src="Logo.gif">
+            </div>
+            <h2>Newborn Registration</h2>
+
+            <form>
+                <div class="row">
+                    <label for="date">Date:</label>
+                    <input type="date" id="date" name="date">
+                </div>
+                <div class="row">
+                    <label>1) Infant's first name:</label>
+                    <input type="text" name="infant_first">
+                    Last: <input type="text" name="infant_last">
+                </div>
+                <div class="row">
+                    <label>2) Medical Record #:</label>
+                    <input type="text" name="record_no">
+                </div>
+                <div class="row">
+                    <label>3) Date of birth:</label>
+                    <input type="date" name="dob">
+                </div>
+                <div class="row">
+                    <label>4) Birth weight:</label>
+                    <input type="text" name="weight">
+                </div>
+                <div class="row">
+                    <label>5) APGAR score:</label>
+                    <input type="text" name="apgar">
+                </div>
+                <div class="row">
+                    <label>6) Mother's first name:</label>
+                    <input type="text" name="mother_first">
+                    Last: <input type="text" name="mother_last">
+                </div>
+                <div class="row">
+                    <label>7) Father's first name:</label>
+                    <input type="text" name="father_first">
+                    Last: <input type="text" name="father_last">
+                </div>
+                <div class="row">
+                    <label>8) Physician (check all):</label>
+                    <select name="physicians" multiple size="4">
+                        <option>Dr. Warren Albert</option>
+                        <option>Dr. Maria Alvarez</option>
+                        <option>Dr. Karen Brinkman</option>
+                        <option>Dr. Micheal Kerry</option>
+                    </select>
+                </div>
+                <div class="buttons">
+                    <input type="submit" value="Register">
+                    <input type="reset" value="Cancel">
+                </div>
+            </form>
+        </div>
+    </body>
+</html>
