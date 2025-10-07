@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <title>First Degree - PKC </title>
+        <script>
+            function giai()
+            {
+                //alert("Muốn giải PT bậc 1 hả?")
+                hsa=frm_firstdegree.hsa.value;
+                hsb=frm_firstdegree.hsb.value;
+                frm_firstdegree.result.value=(-hsb/hsa);
+            }
+            function mo_website_khoa()
+            {
+                window.open("http://is.uel.edu.vn","_blank")
+            }
+        </script>
+    </head>
+    <body>
+        <form name="frm_firstdegree">
+        <table>
+            <tr>
+                <td> A: </td>
+                <td>
+                    <input type="text" name="hsa" id="hsa"/>
+                </td>
+            </tr>
+            <tr>
+                <td> B: </td>
+                <td>
+                    <input type="text" name="hsb" id="hsb"/>
+                </td>
+            </tr>
+            <tr>
+                <td>Result: </td>
+                <td>
+                    <input type="text" id="result" name="result"/>
+                </td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>
+                    <button type="button" onclick="javascript:giai()"> Giải</button>
+                    <button type="reset">Làm lại</button>
+                    <button type="button" onclick ="mo_website_khoa()"> Mở Website Khoa </button>
+                </td>
+            </tr>
+        </table>
+    </body>
+    </form>
+</html>

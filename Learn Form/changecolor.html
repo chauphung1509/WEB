@@ -1,0 +1,36 @@
+<html>
+<head>
+    <title>Trần Khánh Linh</title>
+    <meta charset="utf-8"/>
+    <script>
+        function change_color(value) {
+            document.getElementById("div_color").style.backgroundColor = value;
+        }
+
+        function change_image(value) {
+            document.getElementById("avatar").setAttribute("src", value);
+        }
+    </script>
+</head>
+<body>
+    <form name="frm_color">       
+        <select name="combo_color" onchange="change_color(this.value)">
+            <option value="blue">Xanh lè</option>
+            <option value="red">Đỏ lè</option>
+            <option value="yellow">Vàng lè</option>
+        </select>
+        <div id="div_color" style="width:100%; height:50px; background-color:pink"></div>
+    </form>
+
+    <form name="frm_image">
+        <select name="combo_image" onchange="change_image(this.value)">
+            <option value="images/LVB1.jpg">Ông Obama</option>
+            <option value="images/LVB2.jpg">Ông Putin</option>
+            <option value="images/LVB3.jpg">Ông Kim Udon</option>
+            <option value="images/LVB4.jpg">Ông Cẩm Đào</option>
+        </select>
+        <br/>
+        <img id="avatar" src="images/LVB1.jpg" width="200"/>
+    </form>
+</body>
+</html>

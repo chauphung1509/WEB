@@ -1,0 +1,102 @@
+<html>
+    <head>
+        <title> Customer - PKC </title>
+        <script>
+            normal_customer=0
+            vip_customer=0
+            function save_customer()
+            {
+                id=frm_customer_input.customer_id.value
+                name=frm_customer_input.customer_name.value
+                email=frm_customer_input.customer_email.value
+                phone=frm_customer_input.customer_phone.value
+                type_customer=frm_customer_input.type_customer.checked
+                if(type_customer==true)
+                
+                    vip_customer++
+                
+                else
+                
+                    normal_customer++
+                frm_customer_output.normal_customer.value=normal_customer
+                frm_customer_output.vip_customer.value=vip_customer
+                frm_customer_output.td_customer_id.value=id
+            }
+        </script>
+    </head>
+    <body>
+        <formm name="frm_customer_input">
+            <table>
+                <tr>
+                    <td>Customer ID</td>
+                    <td>
+                        <input type="text" name="customer_id" id="customer_id"></td>
+                </tr>
+                <tr>
+                    <td> Customer name: </td>
+                    <td> <input type="text" name="customer_name" id="customer_name"></td>
+                </tr>
+                <tr>
+                    <td> Customer email: </td>
+                    <td> <input type="text" name="customer_email" id="customer_email"></td>
+                </tr>
+                <tr>
+                    <td> Customer phone: </td>
+                    <td> <input type="checkbox" name="type_customer" id="type_customer"/>
+                        <label for="type_customer"> is VIP </label>
+                    </td>
+                </tr>
+                <tr>
+                    <td> Type of customer: </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <button type="button" onclicl="save_customer()"> Save customer </button>
+                        <button type="reset"> Clear </button>
+                        <button type="button"> Help </button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+        <form name="frm_customer_output">
+            <table>
+                <tr>
+                    <td> Number of normal customers: </td>
+                    <td>
+                        <input type="text" name="normal_customer" id="normal_customer"/>
+                    </td>
+                </tr>
+            </table>
+            <tr>
+                <td colspan="2">
+                    Latest customer:
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <table border="1">
+                        <tr>
+                            <td> Customer ID: </td>
+                            <td id="td_customer_id"></td>
+                        </tr>
+                        <tr>
+                            <td> Customer name: </td>
+                            <td id="td_customer_name"></td>
+                        </tr>
+                        <tr>
+                            <td> Customer email: </td>
+                            <td id="td_customer_email"></td>
+                        </tr>
+                        <tr>
+                            <td> Customer phone: </td>
+                            <td id="td_customer_phone"></td>
+                        </tr>
+                    </table>
+
+                    </table>
+                </td>
+            </tr>
+        </form>
+    </body>
+</html>
