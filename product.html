@@ -1,0 +1,84 @@
+<html>
+    <head>
+        <title> Product PKC </title>
+        <script>
+            function get_tr(id,name,price)
+            {
+                row="<tr><td>"+id+"</td><td>"+name+"</td><td>"+price+"</td></tr>"
+                return row;
+            }
+            function get_tr_format(id,name,price)
+            {
+                row="<tr style='background-color:red'><td>"+id+"</td><td>"+name+"</td><td>"+price+"</td></tr>"
+                return row;
+            }
+            function process_save()
+            {
+                id=frm_product_input.product_id.value;
+                name=frm_product_input.product_name.value;
+                price=frm_product_input.unit_price.value;
+                tr=get_tr(id,name,price); 
+                // tr này là do cách đặt tên thui, đặt là x cũng đc
+                if(frm_product_input.product_type.checked==false)
+                {
+                    tr=get_tr_format(id,name,price);
+                }
+                product_body=document.getElementById("product_body");
+                product_body.innerHTML+=tr;
+            }    
+   
+        </script>
+    </head>
+    <body>
+        <form name="frm_product_input">
+            <table>
+                <tr>
+                    <td> Product ID: </td>
+                    <td>
+                        <input type="text" name="product_id" id="product_id"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td> Product name: </td>
+                    <td>
+                        <input type="text" name="product_name" id="product_name"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td> Unit price: </td>
+                    <td>
+                        <input type="text" name="unit_price" id="unit_price"/>
+                </tr>
+                <tr>
+                    <td> Type: </td>
+                    <td>
+                        <input type="checkbox" name="product_type" id="product_type" checked/>
+                        <label for="product_type">Official</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <button type="button" onclick="process_save()">Save product </button>
+                        <button type="reset">Clear</button>
+                        <button type="button">Help</button>
+                    </td>
+                </tr>
+            </table>
+            <table border="1">
+                <caption> List of products </caption>
+                <thead>
+                    <tr>
+                        <th> Product ID </th>
+                        <th> Product name</th>
+                        <th> Unit price </th>
+                   
+                    </tr>
+                </thead>
+                <tbody id="product_body">
+
+                </tbody>
+            </table>
+        </form>
+    </body>
+</html>
