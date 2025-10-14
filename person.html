@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <title> Person PKC</title>
+        <script type="text/javascript">
+            var person={
+                ID: "CUS01",
+                Name: "Phung Kim Chau",
+                Birthday: new Date(2005,8,15),
+                FullName:function()
+                {
+                    return this.Name + " (" + this.ID +")";
+                },
+                GetAge: function()
+                {
+                    return new Date().getFullYear() - this.Birthday.getFullYear()
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <table border="1">
+            <tr>
+                <td> ID: </td>
+                <td id="td_id"> </td>
+            </tr>
+            <tr>
+                <td> Name: </td>
+                <td id="td_name"> </td>
+            </tr>
+
+            </tr>
+            <tr>
+                <td> Full Name: </td>
+                <td id="td_full_name"> </td>
+            </tr>
+            <tr>
+                <td> Birthday: </td>
+                <td id="td_birthday"> </td>
+            </tr>
+            <tr>
+                <td> Age: </td>
+                <td id="td_age"> </td>
+            </tr>
+        </table>
+        <script type="text/javascript">
+            td_id.innerText=person.ID;
+            td_name.innerText=person.Name;
+            td_full_name.innerText=person.FullName();
+            td_birthday.innerText=person.Birthday.toDateString();
+            td_age.innertext=person.GetAge()
+        </script>
+    </body>
+</html>

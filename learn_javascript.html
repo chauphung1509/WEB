@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <title> Learn Javascript</title>
+        <script src="../js/mainjs.js"></script>
+        <script type="text/javascript">
+            function call_fib()
+            {
+                fib=find_fib(my_form.input_n.value);
+                td_result.innerText=fib;
+
+            }
+        </script>
+    </head>
+    <body>
+        <form name="my_form">
+            <fieldset>
+                <legend> Fib numbers </legend>
+                <table>
+                    <tr>
+                        <td> N:</td>
+                        <td><input type ="number" name="input_n"/></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <button type="button" onclick="call_fib"> Find Fib </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td> Result Fib: </td>
+                        <td id="td_result"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" id="td_digital_clock"> My clock </td>
+                    </tr>
+                </table>
+            </fieldset>
+        </form>
+        <div style="background-color: lightblue; height:100px;" onclick="javascript:this.style='height:100px;background-color: green'">
+
+        </div>
+    </body>
+</html>
