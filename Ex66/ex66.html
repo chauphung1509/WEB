@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Ex66 - Phung Kim Chau </title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			background-color: #fff;
+			padding: 40px;
+		}
+
+		table {
+			border-collapse: collapse;
+			width: 400px;
+			margin: 0 auto;
+		}
+
+		th {
+			background-color: #d8e8d8;
+			font-size: 18px;
+			text-align: center;
+			padding: 8px;
+		}
+
+		td {
+			border: 1px solid #000;
+			padding: 6px 10px;
+		}
+
+		tr.data-row {
+			transition: 0.2s ease;
+		}
+	</style>
+
+	<script>
+		function loadStudent() {
+			// XML string
+			const xmlString = `
+				<student>
+					<id>987456</id>
+					<name>Marie Curie</name>
+					<birthday>7/11/1867</birthday>
+					<gender>Woman</gender>
+				</student>
+			`;
+
+			// Parse XML
+			const parser = new DOMParser();
+			const xmlDoc = parser.parseFromString(xmlString, "text/xml");
+
+			// Extract values
+			const id = xmlDoc.getElementsByTagName("id")[0].childNodes[0].nodeValue;
+			const name = xmlDoc.getElementsByTagName("name")[0].childNodes[0].nodeValue;
+			const birthday = xmlDoc.getElementsByTagName("birthday")[0].childNodes[0].nodeValue;
+			const gender = xmlDoc.getElementsByTagName("gender")[0].childNodes[0].nodeValue;
+
+			// Display values
+			document.getElementById("studentID").textContent = id;
+			document.getElementById("studentName").textContent = name;
+			document.getElementById("birthday").textContent = birthday;
+			document.getElementById("gender").textContent = gender;
+		}
+
+		// Add hover effects
+		function addHoverEvents() {
+			const rows = document.querySelectorAll(".data-row");
+			rows.forEach(row => {
+				row.addEventListener("mouseover", () => {
+					row.style.backgroundColor = "blue";
+					row.style.color = "white";
+				});
+				row.addEventListener("mouseout", () => {
+					row.style.backgroundColor = "white";
+					row.style.color = "black";
+				});
+			});
+		}
+
+		window.onload = function() {
+			loadStudent();
+			addHoverEvents();
+		};
+	</script>
+</head>
+
+<body>
+	<table>
+		<tr>
+			<th colspan="2">Student Information</th>
+		</tr>
+		<tr class="data-row">
+			<td><b>Student ID:</b></td>
+			<td id="studentID"></td>
+		</tr>
+		<tr class="data-row">
+			<td><b>Student Name:</b></td>
+			<td id="studentName"></td>
+		</tr>
+		<tr class="data-row">
+			<td><b>Birthday:</b></td>
+			<td id="birthday"></td>
+		</tr>
+		<tr class="data-row">
+			<td><b>Gender:</b></td>
+			<td id="gender"></td>
+		</tr>
+	</table>
+</body>
+</html>
