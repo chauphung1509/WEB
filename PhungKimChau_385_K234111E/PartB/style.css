@@ -1,0 +1,20 @@
+.lottery-container {
+    max-width: 900px;
+    margin: 0 auto;
+    animation: fade 0.4s ease;
+}
+
+.lottery-ball {
+    animation: ballPop 0.5s ease;
+}
+
+@keyframes ballPop {
+    0% { transform: scale(0); opacity: 0; }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+.radio-section label:hover {
+    transform: scale(1.05);
+    transition: 0.2s;
+}

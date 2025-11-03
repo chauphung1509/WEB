@@ -1,0 +1,32 @@
+<html>
+<head>
+    <title> BW04 A2 - About Me </title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="mainstyle.css">
+</head>
+<body onload="showAbout()">
+
+    <div id="container">  
+        <ul>
+            <li> <a href="#" onclick="showAbout()">About me</a></li>
+            <li> <a href="#">Form & Javascript</a>
+                <ul>
+                    <li> <a href="#" onclick="showProducts()">Products</a></li>
+                    <li> <a href="#"  onclick="showEmployees()">Employees</a></li>
+                </ul>
+            </li>
+            <li> <a href="#">API and External</a>
+            <ul>
+                <li> <a href="#" onclick="showWeather()">Weather API</a></li>
+                <li> <a href="#" onclick="showRSS()">RSS</a></li>
+            </ul>
+            </li>
+            <li> <a href="#" onclick="loginLogout()">Login/Logout</a></li>
+        </ul>
+    </div>
+
+    <div id="content"></div>
+
+    <script src="main.js"></script>
+</body>
+</html>

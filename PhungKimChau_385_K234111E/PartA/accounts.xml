@@ -1,0 +1,16 @@
+<accounts>
+    <account>
+        <username>admin</username>
+        <password>123</password>
+    </account>
+
+    <account>
+        <username>student</username>
+        <password>123456</password>
+    </account>
+
+    <account>
+        <username>guest</username>
+        <password>guest</password>
+    </account>
+</accounts>

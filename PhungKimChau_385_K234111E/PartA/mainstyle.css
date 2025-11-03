@@ -1,0 +1,256 @@
+*{
+margin:0;
+padding:0;
+}
+#container
+{ border:1px solid blue;
+background:gray;
+float:left;
+top: 60px;
+text-indent:0px;
+}
+#container ul{
+float:left;
+list-style:none
+}
+#container ul li{
+position:relative;
+float:left;
+}
+#container ul li a
+{
+display:block;
+color:black;
+font-weight:bold;
+text-decoration:none;
+padding:.3em 6px;
+}
+#container li a:hover
+{color:white;
+background:orange;
+}
+#container li ul
+{position:absolute;
+display:none;
+width:10em
+}
+#container li:hover ul {
+display:block;
+}
+#container ul li ul li{
+width:100%;
+border:1px solid green
+}
+#content {
+    margin-top: 90px;
+    padding: 20px;
+    font-family: Arial;
+}
+
+.card {
+    width: 420px;
+    border-radius: 10px;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+    animation: fade 0.4s ease;
+}
+
+.card img {
+    width: 120px;
+    display:block;
+    border-radius: 8px;
+    margin: auto;
+}
+
+.info {
+    margin-top: 15px;
+    font-size: 17px;
+}
+
+.info p {
+    margin: 8px 0;
+    text-align: center;
+}
+
+@keyframes fade {
+    from {opacity: 0; transform: translateY(10px)}
+    to {opacity: 1; transform: translateY(0)}
+}
+.productTable{width:100%;border-collapse:collapse;font-family:Arial}
+.productTable th{background:#0a84ff;color:#fff;padding:8px}
+.productTable td{border:1px solid #e5e7eb;padding:8px;vertical-align:top;font-size:14px}
+.productTable tr:hover{background:#f5faff}
+.productImg{width:70px;border-radius:6px}
+.empForm input {
+    width: 220px;
+    padding: 6px;
+    margin: 4px;
+}
+
+.empForm button {
+    padding: 6px 10px;
+    margin-left: 4px;
+    background: #0a84ff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.empForm button:hover {
+    background: #0066cc;
+}
+
+.yellow {
+    background: yellow !important;
+}
+
+.magenta {
+    background: magenta !important;
+    color: white;
+}
+.deleteBtn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.deleteBtn img {
+    width: 20px;
+    height: 20px;
+    opacity: 0.7;
+    transition: 0.2s;
+}
+
+.deleteBtn img:hover {
+    opacity: 1;
+    transform: scale(1.18);
+}
+
+.empForm {
+    margin-bottom: 12px;
+}
+
+.empForm input {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#empTable td, #empTable th {
+    text-align: center;
+}
+/* Thêm vào cuối file mainstyle.css */
+
+.weather-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    animation: fade 0.4s ease;
+}
+
+.hourly-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 15px;
+}
+
+.hour-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 28px rgba(0,0,0,0.18);
+}
+
+#citySelect:hover {
+    box-shadow: 0 5px 18px rgba(0, 102, 255, 0.25);
+    transform: scale(1.03);
+}
+
+@media (max-width: 768px) {
+    .hourly-grid {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    }
+    
+    .current-details {
+        flex-direction: column;
+    }
+}
+.rssContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 18px;
+}
+
+.rssItem {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: 0.25s;
+}
+
+.rssItem:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 18px rgba(0,0,0,0.15);
+}
+
+.rssItem img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.rssContent {
+    padding: 12px;
+}
+
+.rssContent h3 {
+    color: #0d47a1;
+    margin-bottom: 10px;
+    font-size: 17px;
+}
+
+.rssContent p {
+    font-size: 14px;
+    color: #444;
+    min-height: 60px;
+}
+
+.rssContent a {
+    display: inline-block;
+    padding: 6px 12px;
+    background: #1a73e8;
+    color: white;
+    font-size: 13px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+.loginForm {
+    width: 350px;
+    margin: auto;
+    padding: 20px;
+    border-radius: 10px;
+    background: white;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+    animation: fade .3s ease;
+}
+
+.loginForm input {
+    width: 100%;
+    padding: 8px;
+    margin: 6px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+.loginForm button {
+    width: 100%;
+    padding: 8px;
+    background: #007bff;
+    color: white;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+.loginForm button:hover {
+    background: #005bbf;
+}
